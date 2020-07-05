@@ -24,8 +24,8 @@ export default ()=> {
   const s3leftTop = useTransform(scrollYProgress, [0.3, 0.42], ['100px', '-300px'])
   const s4leftTop = useTransform(scrollYProgress, [0.35, 0.45], ['-10px', '100px'])
   const s4imgScale = useTransform(scrollYProgress, [0.35, 0.45], [1, 1.2])
-  const s5imgScale = useTransform(scrollYProgress, [0.5, 0.7], [0.01, 0.8])
-  const s5TextScale = useTransform(scrollYProgress, [0.5, 0.85], [0.01, 0.8])
+  const s5imgScale = useTransform(scrollYProgress, [0.5, 0.7], [0.01, 1])
+  const s5TextScale = useTransform(scrollYProgress, [0.5, 0.85], [0.01, 1])
   return (
       <div>
         <Layout>

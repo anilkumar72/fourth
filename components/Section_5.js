@@ -9,6 +9,7 @@ const Wrapper = styled.section`
 width: 100vw;
 height: 100vh;
 max-width: 100%;
+padding-top: 80px;
 background-color: #191919;
 z-index: 3;
 display: flex;
@@ -19,6 +20,7 @@ flex-wrap: wrap;
 const ImgBig = styled(motion.img)`
 width: 40vw;
 height: 60vh;
+border-radius: 10px;
 `
 const ImgText = styled(motion.p)`
 width: 40vw;
