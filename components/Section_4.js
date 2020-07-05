@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import img from '../public/counter-bg.jpg'
 import {motion} from "framer-motion";
 
 
