@@ -3,38 +3,43 @@ import Navbar from "react-bootstrap/Navbar";
 import styled from "styled-components";
 import {motion,useCycle} from "framer-motion";
 import {MenuToggle} from "./Menu/MenuToggle";
+import Navigation from "./Navigation";
+import Color_button from "../Color_button";
 
 const {useRef} = require("react");
 
 const Wrapper = styled(Navbar)`
-position: relative;
-width: 100%;
-height: 14vh;
-z-index: 20;
-border-bottom: 1px solid rgba(255,255,255,0.79);
-
 .background {
   position: absolute;
   top: 0;
   left: 0;
-  width:100vw;
+ width: 100%;
   height: 100vh;
-  background: rgb(255,255,255);
+  background: black;
   z-index: 100;
 }
 
 nav {
-  position: absolute;
+position: absolute;
+  display: flex;
+  flex-direction: row;
   top: 0;
   left: 0;
-  bottom: 0;
   z-index: 201;
-  width: 300px;
+  max-width: 100%;
+  width: 100vw;
+  height: 13vh;
+border-bottom: 1px solid rgba(255,255,255,0.79);
+align-items: center;
+a{
+color: white;
+text-decoration: none;
+}
 }`;
 
 const sidebar = {
     open:  ({
-        clipPath: `circle(${1000 * 2 + 200}px at 40px 40px)`,
+        clipPath: `circle(${2200}px at 50px 50px)`,
         transition: {
             type: "spring",
             stiffness: 20,
@@ -42,17 +47,25 @@ const sidebar = {
         }
     }),
     closed: {
-        clipPath: "circle(30px at 40px 40px)",
+        clipPath: "circle(0px at 70px 55px)",
         transition: {
-            delay: 0.5,
             type: "spring",
-            stiffness: 400,
+            stiffness: 70,
             damping: 40
         }
     }
 };
 
-
+const HeaderDiv =styled.div` 
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  margin-left: 100px;
+  justify-content: space-between;
+  align-items: center; 
+  margin-right: 100px;
+ 
+`;
 
 export default () => {
     const [isOpen, toggleOpen] = useCycle(false, true);
@@ -66,11 +79,20 @@ export default () => {
                     animate={isOpen ? "open" : "closed"}
                     ref={containerRef}
                 >
-                    <motion.div className="background" variants={sidebar} />
+
+                    <motion.div className="background" variants={sidebar} >
+
+                        <Navigation/>
+
+                    </motion.div>
                     <MenuToggle toggle={() => toggleOpen()} />
+                    <HeaderDiv>
+                        <a href='#'>Logo</a>
+                        <Color_button title='Contact us'/>
+                    </HeaderDiv>
                 </motion.nav>
             </div>
-            from header
+
         </Wrapper>
     )
 }

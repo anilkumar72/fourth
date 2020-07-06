@@ -24,8 +24,9 @@ export default ()=> {
   const s3leftTop = useTransform(scrollYProgress, [0.3, 0.42], ['100px', '-300px'])
   const s4leftTop = useTransform(scrollYProgress, [0.35, 0.45], ['-10px', '100px'])
   const s4imgScale = useTransform(scrollYProgress, [0.35, 0.45], [1, 1.2])
-  const s5imgScale = useTransform(scrollYProgress, [0.5, 0.7], [0.01, 1])
-  const s5TextScale = useTransform(scrollYProgress, [0.5, 0.85], [0.01, 1])
+  const s5TextScale = useTransform(scrollYProgress, [0.5, 0.75], [0.01, 1])
+  const s5imgright = useTransform(scrollYProgress, [0.5, 0.75], ['-300px', '-30px'])
+
   return (
       <div>
         <Layout>
@@ -34,7 +35,7 @@ export default ()=> {
             <Section_2 pro={sValue2} pro2 ={sValue}/>
             <Section_3  pro={s3right} pro2={s3left} pro3={s3rightScale} s3rightLeft={s3rightLeft} s3leftTop={s3leftTop} />
             <Section_4 s4leftTop={s4leftTop} s4imgScale={s4imgScale}/>
-            <Section_5 s5imgScale={s5imgScale} s5TextScale={s5TextScale}/>
+            <Section_5 s5TextScale={s5TextScale} s5imgright={s5imgright} />
             <Section_6/>
           </div>
         </Layout>

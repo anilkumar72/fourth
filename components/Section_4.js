@@ -31,7 +31,8 @@ display: flex;
 justify-content: space-evenly;
 flex-direction: row;
 overflow: hidden; 
-width: 25vw ;
+width: 80vw ;
+text-align: center;
 `;
 
 export default (props) => {
@@ -41,15 +42,25 @@ export default (props) => {
                 <p>Our many years of experience in numbers</p>
                 <TextDiv >
                     <div>
-                        <p>100 +</p>
+                        <p className='count-text' >150</p>
                         <p>Projects</p>
                     </div>
                     <div>
-                        <p>5+</p>
-                        <p>years</p>
+                        <p className='count-text'>95</p>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    <div>
+                        <p className='count-text'>5</p>
+                        <p>awards</p>
                     </div>
                 </TextDiv>
             </BgImg>
+
+            <style jsx>{`
+              .count-text{
+              font-size: 100px;
+              }
+`}</style>
 
         </Wrapper>
 

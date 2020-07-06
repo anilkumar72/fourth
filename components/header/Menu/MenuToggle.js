@@ -5,14 +5,13 @@ const Path = props => (
     <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="hsl(0, 0%, 18%)"
+        stroke="#fff"
         strokeLinecap="round"
         {...props}
     />
 );
 
 const Button =styled.button`
-
   outline: none;
   border: none;
   -webkit-user-select: none;
@@ -20,18 +19,24 @@ const Button =styled.button`
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
-  top: 18px;
-  left: 15px;
+  top: 15px;
+  left: 50px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: transparent;
   z-index: 101;
+  :active{
+  outline: none;
+  }
+  :focus{
+  outline: none;
+  }
 `;
 
 export const MenuToggle = ({ toggle }) => (
     <Button onClick={toggle}>
-        <svg width="23" height="23" viewBox="0 0 23 23">
+        <svg width="35" height="35" viewBox="0 0 23 23">
             <Path
                 variants={{
                     closed: { d: "M 2 2.5 L 20 2.5" },
