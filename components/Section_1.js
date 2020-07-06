@@ -64,10 +64,10 @@ width: 60%;
     width: 90vw;}
   @media screen and (max-width: 900px){
     width: 90vw;}
-`
+`;
 const HeaderSpan= styled(motion.span)`
 
-color: #ff4713;
+background-image: linear-gradient(to right,#f41351,#eb1c23);
 `;
 
 export default () => {

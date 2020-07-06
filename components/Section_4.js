@@ -1,6 +1,7 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled from 'styled-components'
 import {motion} from "framer-motion";
+import CountUp from "react-countup";
 
 
 const Wrapper = styled(motion.section)`
@@ -36,13 +37,26 @@ text-align: center;
 `;
 
 export default (props) => {
+
     return (
         <Wrapper >
             <BgImg>
                 <p>Our many years of experience in numbers</p>
                 <TextDiv >
                     <div>
-                        <p className='count-text' >150</p>
+                        <p className='count-text' >
+
+                           <CountUp start={0} end={100} delay={0}>
+                                {({ countUpRef }) => (
+                                    <div>
+                                        <span ref={countUpRef} />
+                                    </div>
+                                )}</CountUp>
+
+
+
+
+                        </p>
                         <p>Projects</p>
                     </div>
                     <div>

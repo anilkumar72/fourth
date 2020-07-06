@@ -39,7 +39,7 @@ text-decoration: none;
 
 const sidebar = {
     open:  ({
-        clipPath: `circle(${2200}px at 50px 50px)`,
+        clipPath: `circle(2000px at 50px 50px)`,
         transition: {
             type: "spring",
             stiffness: 20,
@@ -51,7 +51,8 @@ const sidebar = {
         transition: {
             type: "spring",
             stiffness: 70,
-            damping: 40
+            damping: 40,
+            delay:0.5
         }
     }
 };
